@@ -14,3 +14,27 @@ CREATE TABLE `user` (
   `senha` varchar(60) DEFAULT NULL,
   PRIMARY KEY (`id`)
 )
+
+# As rotas são :
+
+**Aqui voce faz  o registor
+
+curl --request POST \
+  --url http://127.0.0.1:8000/register \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"nome": "nome",
+	"email": "email@gmail.com",
+	"senha": "senha"
+}'
+
+**Aqui voce valida o login 
+
+curl --request POST \
+  --url http://127.0.0.1:8000/authenticate \
+  --header 'Content-Type: application/json' \
+  --data '{
+	"email":"hash23@2outlook.com",
+	"senha":"senha"
+}'
+
