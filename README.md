@@ -17,7 +17,8 @@ CREATE TABLE `user` (
 
 # As APIs são :
 
-**  Registra um usuario **
+**Registra um usuario**
+
 Retorna um token jwt
 
 curl --request POST \
@@ -30,6 +31,7 @@ curl --request POST \
 }'
 
 **Valida o login**
+
 Retorna um token jwt
 
 curl --request POST \
@@ -41,6 +43,7 @@ curl --request POST \
 }'
 
 **Traz os usuarios do banco**
+
 Para trazer precisa validar via toke jwt criado nas apis de login e de register
 
 curl --request GET \
