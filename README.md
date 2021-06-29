@@ -7,12 +7,12 @@ Essa api foi desenvolvida em node usando express e outras ferramentas. Ela tem a
 
 Os dados do banco esta no arquivo `/src/database/db.js`
 
-CREATE TABLE `user` (
-  `id` int(4) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(30) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `senha` varchar(60) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+CREATE TABLE 'user' (
+  'id' int(4) NOT NULL AUTO_INCREMENT,
+  'nome' varchar(30) NOT NULL,
+  'email' varchar(50) NOT NULL,
+  'senha' varchar(60) DEFAULT NULL,
+  PRIMARY KEY ('id')
 )
 
 # As APIs são :
