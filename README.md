@@ -15,9 +15,10 @@ CREATE TABLE `user` (
   PRIMARY KEY (`id`)
 )
 
-# As rotas são :
+# As APIs são :
 
-**Aqui voce faz  o registor
+**  Registra um usuario **
+Retorna um token jwt
 
 curl --request POST \
   --url http://127.0.0.1:8000/register \
@@ -28,13 +29,20 @@ curl --request POST \
 	"senha": "senha"
 }'
 
-**Aqui voce valida o login 
+**Valida o login**
+Retorna um token jwt
 
 curl --request POST \
   --url http://127.0.0.1:8000/authenticate \
   --header 'Content-Type: application/json' \
   --data '{
-	"email":"hash23@2outlook.com",
+	"email":"email@gmail.com",
 	"senha":"senha"
 }'
 
+**Traz os usuarios do banco**
+Para trazer precisa validar via toke jwt criado nas apis de login e de register
+
+curl --request GET \
+  --url http://127.0.0.1:8000/user \
+  --header 'authorization: Bearer `token jwt`'
